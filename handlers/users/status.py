@@ -13,6 +13,6 @@ async def info(message:types.Message):
     await message.reply(text)
 @dp.message_handler(Command('status'))
 async def get(message:types.Message):
-    text = get_info()
+    text = get_users()
     await message.answer(text)
 
