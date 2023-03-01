@@ -5,7 +5,7 @@ env = Env()
 env.read_env()
 URL = env.str('BASE_URL')
 def create_user(name,telegram_id):
-    url = f'{URL}/users/'
+    url = f'{URL}/app/botuser/'
     requests.post(url=url,data={
         'name':name,
         "telegram_id":telegram_id
@@ -17,7 +17,7 @@ def get_info():
     rest = json.loads(response.text)
     return rest['info']
 def get_users():
-    url = f'{URL}/users/'
+    url = f'{URL}/app/botuser/'
     response = requests.get(url)
     rest = json.loads(response.text)
     return rest
