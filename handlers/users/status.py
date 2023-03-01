@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandHelp,Command
 
-from api import get_info
+from api import get_users
 from loader import dp
 @dp.message_handler(Command('info'))
 async def info(message:types.Message):
